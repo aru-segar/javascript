@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import UserCard from './components/UserCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>User List</h1>
+      <UserCard
+        name="John Doe"
+        role="Software Engineer"
+        email="johndoe@email.com"
+        status="Active"
+      />
+      <UserCard
+        name="Jane Smith"
+        role="Project Manager"
+        email="jane@example.com"
+        status="Inactive"
+      />
+      <UserCard
+        name="Alice Johnson"
+        role="UX Designer"
+        email="alice@example.com"
+        status="Active"
+      />
+
     </div>
-  );
+  )
 }
 
 export default App;
