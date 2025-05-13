@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from './components/Button';
-
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const handleClick = (label) => {
@@ -8,12 +9,13 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Custom Button Variants</h2>
-      <Button label="Primary Button" variant="primary" onClick={() => handleClick("Primary")} />
-      <Button label="Secondary Button" variant="secondary" onClick={() => handleClick("Secondary")} />
-      <Button label="Danger Button" variant="danger" onClick={() => handleClick("Danger")} />
-</div>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Navbar />
+      <div style={{ display: 'flex', flex: 1 }}>
+        <Sidebar />
+        <Dashboard onButtonClick={handleClick} />
+      </div>
+    </div>
   )
 }
 
