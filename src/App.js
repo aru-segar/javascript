@@ -1,22 +1,14 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import React from "react";
+import "./App.css"; // Import your CSS file
 
 function App() {
-  const handleClick = (label) => {
-    console.log(`${label} button clicked!`);
-  };
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <Navbar />
-      <div style={{ display: 'flex', flex: 1 }}>
-        <Sidebar />
-        <Dashboard onButtonClick={handleClick} />
-      </div>
+    <div className="card-container">
+      <div className="card">Card 1</div>
+      <div className="card">Card 2</div>
+      <div className="card">Card 3</div>
     </div>
-  )
+  );
 }
 
 export default App;
