@@ -1,10 +1,10 @@
 import React from 'react';
-import SalesBarChart from './components/SalesBarChart';
+import AttendancePieChart from './components/AttendancePieChart';
 
 function App() {
   return (
     <div style={{ padding: '40px' }}>
-      <SalesBarChart />
+      <AttendancePieChart />
     </div>
   );
 }
