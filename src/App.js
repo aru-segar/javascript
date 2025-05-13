@@ -1,10 +1,10 @@
-import React from "react";
-import UserTable from './components/UserTable';
+import React from 'react';
+import SalesBarChart from './components/SalesBarChart';
 
 function App() {
   return (
-    <div>
-      <UserTable />
+    <div style={{ padding: '40px' }}>
+      <SalesBarChart />
     </div>
   );
 }
