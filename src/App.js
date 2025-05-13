@@ -1,30 +1,19 @@
 import React from 'react';
-import UserCard from './components/UserCard';
+import Button from './components/Button';
+
 
 function App() {
-  return (
-    <div>
-      <h1>User List</h1>
-      <UserCard
-        name="John Doe"
-        role="Software Engineer"
-        email="johndoe@email.com"
-        status="Active"
-      />
-      <UserCard
-        name="Jane Smith"
-        role="Project Manager"
-        email="jane@example.com"
-        status="Inactive"
-      />
-      <UserCard
-        name="Alice Johnson"
-        role="UX Designer"
-        email="alice@example.com"
-        status="Active"
-      />
+  const handleClick = (label) => {
+    console.log(`${label} button clicked!`);
+  };
 
-    </div>
+  return (
+    <div style={{ padding: '20px' }}>
+      <h2>Custom Button Variants</h2>
+      <Button label="Primary Button" variant="primary" onClick={() => handleClick("Primary")} />
+      <Button label="Secondary Button" variant="secondary" onClick={() => handleClick("Secondary")} />
+      <Button label="Danger Button" variant="danger" onClick={() => handleClick("Danger")} />
+</div>
   )
 }
 
