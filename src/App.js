@@ -1,12 +1,10 @@
 import React from "react";
-import "./App.css"; // Import your CSS file
+import UserTable from './components/UserTable';
 
 function App() {
   return (
-    <div className="card-container">
-      <div className="card">Card 1</div>
-      <div className="card">Card 2</div>
-      <div className="card">Card 3</div>
+    <div>
+      <UserTable />
     </div>
   );
 }
